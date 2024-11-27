@@ -1,15 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/stpotter16/dumb-money/handlers"
 )
 
 func main() {
-    handler := http.NewServeMux()
-    handler.HandleFunc("GET /", func(w http.ResponseWriter, r *http.Request) {
-        fmt.Fprintf(w, "Hello, World!")
-    })
-    log.Fatal(http.ListenAndServe(":8080", handler))
+	server := handlers.New()
+	log.Fatal(http.ListenAndServe(":8080", server.Handler()))
 }
