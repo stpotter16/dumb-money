@@ -7,3 +7,15 @@ A "budgeting" tool that's focused on one question: Did you spend more than you m
 # Features
 - Link external accounts
 - View made vs spent
+
+# TODO
+
+## Screens
+
+### Login
+- empty
+- error
+
+### Home page
+- no accounts
+- with accounts
